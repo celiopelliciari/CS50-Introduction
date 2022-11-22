@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            function ChangeColor(x)
+            {
+                if (x==='Not')
+                {
+                    document.getElementById("Not").style.backgroundColor="red";
+                }
+                else
+                {
+                    document.getElementById(x).style.backgroundColor="green";
+                }
+
+            }
+
+            function Check()
+            {
+                let name = document.querySelector("#box").value;
+                if (name =='Célio')
+                {
+                    document.getElementById("box").style.borderColor="green";
+                    document.getElementById("submit").style.backgroundColor="green";
+                }
+                else if (name =='Célinho')
+                {
+                    document.getElementById("box").style.borderColor="green";
+                    document.getElementById("submit").style.backgroundColor="green";
+                }
+                else if (name =='Céliao')
+                {
+                    document.getElementById("box").style.borderColor="green";
+                    document.getElementById("submit").style.backgroundColor="green";
+                }
+                else
+                {
+                    document.getElementById("box").style.borderColor="red";
+                    document.getElementById("submit").style.backgroundColor="red";
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr3 class="bold">Who is the best father ever?</hr3>
+                    <button id="Celio" onclick="ChangeColor('Celio')">Célio</button>
+                    <button id="Celinho" onclick="ChangeColor('Celinho')">Célinho</button>
+                    <button id="Celiao" onclick="ChangeColor('Celiao')">Célião</button>
+                    <button id="Not" onclick="ChangeColor('Not')">Not is Célio, "inho" or "ão"</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr3 class="bold">Write the name of the best father ever:</hr3>
+                <form onsubmit="Check(); return false">
+                    <input id="box" type="text">
+                    <input id="submit" type="submit" value="Confirm">
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
